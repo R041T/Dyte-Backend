@@ -26,6 +26,17 @@ This is a [Moleculer](https://moleculer.services/)-based microservices project. 
 5. Trigger -  When a get request is received in the /ip path it performs a POST request to all webhooks in the database in batches of 10 in parallel. It accepts the Ip address as a parameter.
 
 
+## MySQL Database Code
+
+1. Creating the database - `Create database dyte`
+2. Creating table - `create table webhooks(id char(64), targetUrl varchar(100))`
+3. Example of Inserting rows - `insert into webhooks value('d65b2caf-162a-41c1-b37f-a4ffefa10780','https://www.dyte.io/')`
+4. Selecting rows - `select * from webhooks`
+5. Updating rows - `update webhooks set targetUrl = 'https://www.linkedin.com'`
+6. Deleting rows - `delete from webhooks where id = 'd65b2caf-162a-41c1-b37f-a4ffefa10780'` 
+
+id is char(64) because I am using UUIDs which is 64 characters in length
+
 ## Useful links
 
 * Moleculer website: https://moleculer.services/
