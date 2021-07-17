@@ -147,7 +147,7 @@ module.exports = {
 			},
 		},
 
-		/* When a get request is received in the /ip path it performs a POST request
+		/* When a get request is received in the /ip path it sends a POST request with a payload of ipAddress and Unix Timestamp
 		to all webhooks in the database in batches of 10 in parallel.
 		It accepts the Ip address as a parameter.
 		*/
