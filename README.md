@@ -37,6 +37,10 @@ This is a [Moleculer](https://moleculer.services/)-based microservices project. 
 
 id is char(64) because I am using UUIDs which is 64 characters in length
 
+## Dockerfile and docker-compose.yml added.
+
+
+
 ## Useful links
 
 * Moleculer website: https://moleculer.services/
