@@ -187,7 +187,7 @@ module.exports = {
 										},
 										maxRedirects: 5, // If the request is not resolved, it will redirect only 5 times at max
 									})
-									.post("/register", {
+									.post("/", {
 										ipAddress: ctx.params.ipAddress,
 										// Date().getTime() gives Unix time in milliseconds
 										// Divide by 1000 to get it in seconds
