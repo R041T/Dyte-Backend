@@ -8,7 +8,7 @@ This is a [Moleculer](https://moleculer.services/)-based microservices project. 
 ## Usage
 
 1. run `npm install` to install all the dependencies.
-2. In the `webhooks.service.js` file change the MySQL database parameters in the adapter in the order (DB_NAME,DB_USERNAME,DB_PASSWORD,DB_HOST,Database used);   
+2. In the `webhooks.service.js` file change the MySQL database parameters in the adapter in the order (`DB_NAME,DB_USERNAME`,`DB_PASSWORD`,`DB_HOST`,`Database used`);   
 3.Start the project with `npm run dev` command. 
 4. After starting, open the http://localhost:3000/ URL in your browser. 
 5. The webhooks can be accessed in the url - http://localhost:3000/api/webhook/
