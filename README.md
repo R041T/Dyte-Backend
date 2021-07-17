@@ -6,21 +6,24 @@
 This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
 
 ## Usage
-Start the project with `npm run dev` command. 
-After starting, open the http://localhost:3000/ URL in your browser. 
-On the welcome page you can test the generated services via API Gateway and check the nodes & services.
 
-In the terminal, try the following commands:
-- `nodes` - List all connected nodes.
-- `actions` - List all registered service actions.
-- `call greeter.hello` - Call the `greeter.hello` action.
-- `call greeter.welcome --name John` - Call the `greeter.welcome` action with the `name` parameter.
-
+1. run `npm install` to install all the dependencies.
+2. In the `webhooks.service.js` file change the MySQL database parameters in the adapter in the order (DB_NAME,DB_USERNAME,DB_PASSWORD,DB_HOST,Database used);   
+3.Start the project with `npm run dev` command. 
+4. After starting, open the http://localhost:3000/ URL in your browser. 
+5. The webhooks can be accessed in the url - http://localhost:3000/api/webhook/
 
 
 ## Services
 - **api**: API Gateway services
-- **greeter**: Sample service with `hello` and `welcome` actions.
+- **webhooks**: Service with `register`, `list`, `update`, `delete` and `trigger` actions.
+
+## Actions in webhook service
+1. Register - When a get request is received in the /register path it inserts a UUID and targetUrl from parameter to the database.
+2. List - When a get request is received in the /list path it fetches all the webhook data stored in the database.
+3. Update - When a get request is received in the /update path it updates the URL to a new target based on the ID.
+4. 4. Delete - When a get request is received in the /delete path it deletes the webhook data based on the ID.
+5. Trigger -  When a get request is received in the /ip path it performs a POST request to all webhooks in the database in batches of 10 in parallel. It accepts the Ip address as a parameter.
 
 
 ## Useful links
